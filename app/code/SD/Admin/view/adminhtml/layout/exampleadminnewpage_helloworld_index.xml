@@ -7,6 +7,7 @@
     </referenceBlock>
     <body>
         <referenceContainer name="content">
+            <uiComponent name="sd_admin_feed_grid" />
             <block class="Magento\Backend\Block\Template" template="SD_Admin::helloworld.phtml"/>
         </referenceContainer>
     </body>

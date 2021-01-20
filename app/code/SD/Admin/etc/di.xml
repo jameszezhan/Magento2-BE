@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="sd_admin_feed_grid_data_source" xsi:type="string">SD\Admin\Model\ResourceModel\PricingRule\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="SD\Admin\Model\ResourceModel\PricingRule\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sd_sims_pricing_feed</argument>
+            <argument name="eventPrefix" xsi:type="string">sd_sims_pricing_feed</argument>
+            <argument name="eventObject" xsi:type="string">sd_sims_pricing_feed</argument>
+            <argument name="resourceModel" xsi:type="string">SD\Admin\Model\PricingRule</argument>
+        </arguments>
+    </type>
+    <virtualType name="SD\Admin\Model\ResourceModel\PricingRule\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sd_sims_pricing_feed</argument>
+            <argument name="resourceModel" xsi:type="string">SD\Admin\Model\ResourceModel\PricingRule</argument>
+        </arguments>
+    </virtualType>
+</config>
