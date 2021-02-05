@@ -1,0 +1,37 @@
+<?php
+/** @var \SomethingDigital\Auction\Block\Form\Submit $block */
+?>
+<form class="form" action="<?= $block->escapeUrl($block->getPostActionUrl()) ?>" method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off">
+    <legend class="legend">
+        <span><?= $block->escapeHtml(__('Submit an Auction item')) ?></span>
+    </legend>
+    <div class="field required">
+        <label for="item_name" class="label"><span><?= $block->escapeHtml(__('Item Name')) ?></span></label>
+        <div class="control">
+            <input type="text" name="item_name" title="item_name" class="input-text" id="item_name">
+        </div>
+    </div>
+    <div class="field">
+        <label for="item_sku" class="label"><span><?= $block->escapeHtml(__('Item SKU')) ?></span></label>
+        <div class="control">
+            <input type="text" name="item_sku" title="item_sku" class="input-text" id="item_sku">
+        </div>
+    </div>
+    <div class="field required">
+        <label for="item_contact_email" class="label"><span><?= $block->escapeHtml(__('Contact Email')) ?></span></label>
+        <div class="control">
+            <input type="text" name="item_contact_email" title="item_contact_email" class="input-text" id="item_contact_email">
+        </div>
+    </div>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button
+                type="submit"
+                class="action submit primary"
+                title="Submit Auction Item">
+                <span><?= $block->escapeHtml(__('Submit Auction Item')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>
+
