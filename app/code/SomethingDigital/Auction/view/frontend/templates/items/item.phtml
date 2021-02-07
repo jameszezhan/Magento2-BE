@@ -1,0 +1,15 @@
+<?php
+/** @var \SomethingDigital\Auction\Block\Item $block */
+?>
+
+<?php $item = $block->getItem(); ?>
+<?php if ($item) :?>
+    <?php $itemDetails = $item->getData();?>
+    <ul>
+        <?php foreach ($itemDetails as $itemDetailKey => $itemDetail): ?>
+            <li><?= $block->escapeHtml($itemDetailKey . ": " . $itemDetail); ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <div><?= $block->escapeHtml(__("Item Not Found"))?></div>
+<?php endif; ?>

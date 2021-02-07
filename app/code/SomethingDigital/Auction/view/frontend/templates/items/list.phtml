@@ -1,0 +1,16 @@
+<?php
+/** @var \SomethingDigital\Auction\Block\Items $block */
+?>
+
+<?php $items = $block->getItems(); ?>
+
+<?php foreach ($items as $item): ?>
+    <div>
+        <span><?= $block->escapeHtml($item->getItemName()); ?></span>
+        <a
+            target="_blank"
+            href=<?=$block->escapeUrl($block->getItemUrl($item->getId())); ?> >
+            <?= $block->escapeHtml(__("More"))?>
+        </a>
+    </div>
+<?php endforeach; ?>
