@@ -33,6 +33,6 @@ class Submit extends \Magento\Framework\View\Element\Template
      */
     public function getPostActionUrl()
     {
-        return $this->urlBuilder->getUrl('auction/request/form');
+        return $this->urlBuilder->getUrl('auction/request/post');
     }
 }
